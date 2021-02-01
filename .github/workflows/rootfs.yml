@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_rootfs:
+    name: buildroot
     runs-on: ubuntu-18.04
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: configure
+      run: echo "buildroot demo"
+
